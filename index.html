@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/7bafa0199c.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/globales.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-success">
+        <a class="navbar-brand mx-auto" href="/">Cuentas de banco</a>
+        <button type="button" disabled="false" id="agregar" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#modalForm">
+            Agregar Cuenta
+          </button>
+    </nav>
+    <div id="divCuentas">
+        <h1>Hola</h1>
+      </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Ayuda a usuario</h4>
+        <button type="button" class="close cierraModal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        	<form>
+              <div class="form-group">
+                <label for="alias">Alias</label>
+                <input type="text" class="form-control" id="alias" placeholder="Ingrese el Alias de su cuenta">
+              </div>
+              <div class="form-group">
+                <label for="sel1">Select list (select one):</label>
+                <select class="form-control" id="bancos" name="sellist1"></select>
+              </div>
+              <div class="form-group">
+                  <label for="ultimos_digit">Últimos Dígitos</label>
+                  <input type="text" class="form-control" id="ultimos_digit" placeholder="Ingrese los Últimos Dígitos de su tarjeta">
+              </div>
+            </form>
+            <div class="alert alert-success alertas" role="alert" id="alert">
+                usuario Guadado correctamente
+              </div>
+              <div class="alert alert-danger alertas" role="alert" id="error">
+                  Error
+              </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default cierraModal" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary" id="enviar">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
